@@ -1,6 +1,8 @@
 package com.teamroles.app.model;
 
+import javax.persistence.Entity;
 
+@Entity
 public class Role {
 	
 	private int id;

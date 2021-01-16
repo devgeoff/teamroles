@@ -2,6 +2,9 @@ package com.teamroles.app.model;
 
 import java.util.List;
 
+import javax.persistence.Entity;
+
+@Entity
 public class User {
 	
 	private int id;
