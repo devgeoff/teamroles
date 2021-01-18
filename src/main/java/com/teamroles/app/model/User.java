@@ -1,18 +1,24 @@
 package com.teamroles.app.model;
 
 import java.util.List;
+import java.util.UUID;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 
 public class User {
 	
-	private int id;
+	@Id
+	private UUID userId;
 	private String name;
 	private List<Team> teams;
 		
-	public int getId() {
-		return id;
+	public UUID getId() {
+		return userId;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setId(UUID id) {
+		this.userId = id;
 	}
 	public String getName() {
 		return name;
@@ -28,6 +34,4 @@ public class User {
 	}
 	
 	
-	
-
 }
