@@ -53,8 +53,14 @@ public class RoleServiceImplementation implements RoleService {
 
 	@Override
 	public Role lookupRole(UUID userId, UUID teamId) {
-		// TODO Auto-generated method stub
-		return null;
+		Role role = new Role();
+		role.setName("Developer");
+		Membership membership = membershipRepository.findRole(userId, teamId);
+		if(membership != null ){
+			role.setName("");
+			role.setId(membership.getRoleId());
+		}
+		return role;
 	}
 
 }
