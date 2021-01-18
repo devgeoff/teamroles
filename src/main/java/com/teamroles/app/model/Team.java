@@ -1,18 +1,23 @@
 package com.teamroles.app.model;
 
-import javax.persistence.Entity;
+import java.util.UUID;
 
-@Entity
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+
 public class Team {
-	private int id;
+	
+	@Id
+	private UUID teamId;
 	private int name;
 	
 	
-	public int getId() {
-		return id;
+	public UUID getId() {
+		return teamId;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setId(UUID id) {
+		this.teamId = id;
 	}
 	public int getName() {
 		return name;

@@ -4,8 +4,8 @@ import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.teamroles.app.model.Role;
+import com.teamroles.app.model.Membership;
 
-public interface RoleRepository extends JpaRepository<Role, UUID> {
+public interface MembershipRepository extends JpaRepository<Membership, UUID> {
 
 }
