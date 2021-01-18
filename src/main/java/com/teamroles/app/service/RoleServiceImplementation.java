@@ -38,6 +38,7 @@ public class RoleServiceImplementation implements RoleService {
 	@Override
 	public List<Membership> fetchMemberships(UUID roleId) {
 		
+		//Filtering to get Memberships that match the Role Id
 		return membershipRepository.findAll()
 				.stream()
 				.filter(membership -> membership.getRoleId().equals(roleId))
@@ -54,6 +55,8 @@ public class RoleServiceImplementation implements RoleService {
 	@Override
 	public Role lookupRole(UUID userId, UUID teamId) {
 		Role role = new Role();
+		
+		//Setting up default Role which is Developer
 		role.setName("Developer");
 		Membership membership = membershipRepository.findRole(userId, teamId);
 		if(membership != null ){
